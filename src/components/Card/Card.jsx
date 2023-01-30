@@ -1,6 +1,6 @@
 import React from "react";
+import { Button } from "../Button/Button";
 
-// import { cards } from "../../data/cards";
 import styles from "./styles.module.css";
 
 export const Card = ({ card }) => {
@@ -14,7 +14,7 @@ export const Card = ({ card }) => {
       <h2 className={styles.title}>{card.name}</h2>
       <p className={styles.price}>Цена: {card.price}</p>
       <p className={styles.count}>Количество: {card.count}</p>
-      <button>Добавить</button>
+      <Button>Выбрать</Button>
     </div>
   );
 };
