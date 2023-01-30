@@ -1,0 +1,31 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 15vw;
+  margin: 1%;
+  padding: 2%;
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+.root:hover {
+  transform: scale(105%);
+  transition: 0.2s all;
+}
+.title {
+  font-size: 24px;
+}
+.img {
+  object-fit: cover;
+  width: 100%;
+}
+.price,
+.count {
+  font-size: 20px;
+}
+.title,
+.price,
+.count {
+  line-height: 150%;
+}
