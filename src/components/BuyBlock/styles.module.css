@@ -1,0 +1,13 @@
+.root {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  background-color: cornsilk;
+  border-radius: 5px;
+}
+.subtitle {
+  font-size: 1.3em;
+}
