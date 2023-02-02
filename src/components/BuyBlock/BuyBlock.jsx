@@ -1,5 +1,4 @@
 import React from "react";
-// import { classnames } from "classnames";
 import styles from "./styles.module.css";
 
 export const BuyBlock = ({ children, title, subtitle, descr }) => {

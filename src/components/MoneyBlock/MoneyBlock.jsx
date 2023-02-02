@@ -1,25 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "../Button/Button";
 import { BuyBlock } from "../BuyBlock/BuyBlock";
 
 import styles from "./styles.module.css";
 
 export const MoneyBlock = () => {
+  const [enteredMoneyValue, setEnteredMoneyValue] = useState(50);
+  const [activeMoneyValue, setActiveMoneyValue] = useState(0);
+
   return (
     <div className={styles.root}>
       <BuyBlock title={"Внесите деньги"}>
         <form className={styles.form}>
-          <select name="enterMoney" className={styles.enterMoney}>
+          <select
+            name="enterMoney"
+            value={enteredMoneyValue}
+            onChange={(e) => setEnteredMoneyValue(e.target.value)}
+            className={styles.enterMoney}
+          >
             <option value="50">50</option>
             <option value="100">100</option>
             <option value="500">500</option>
             <option value="1000">1000</option>
           </select>
         </form>
-        <Button>Внести</Button>
+        <Button
+          onClick={() => {
+            setActiveMoneyValue(enteredMoneyValue);
+            console.log(enteredMoneyValue);
+          }}
+        >
+          Внести
+        </Button>
       </BuyBlock>
 
-      <BuyBlock title={`Ваш баланс: ${1000}`}></BuyBlock>
+      <BuyBlock title={`Ваш баланс: ${activeMoneyValue}`}></BuyBlock>
 
       <BuyBlock
         title={"Окно выдачи товара"}

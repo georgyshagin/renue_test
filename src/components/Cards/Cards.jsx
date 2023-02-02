@@ -1,6 +1,5 @@
 import React from "react";
 import { Card } from "../Card/Card";
-// import classnames from "classnames";
 import styles from "./styles.module.css";
 
 export const Cards = ({ cards, cardId, onCardClick }) => {

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Cards } from "../../components/Cards/Cards";
 import { MoneyBlock } from "../../components/MoneyBlock/MoneyBlock";
-// import classnames from "classnames";
 import styles from "./styles.module.css";
 import { cards } from "../../data/cards";
 
