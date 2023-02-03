@@ -2,7 +2,7 @@ import React from "react";
 import { Card } from "../Card/Card";
 import styles from "./styles.module.css";
 
-export const Cards = ({ cards, cardId, onCardClick }) => {
+export const Cards = ({ cards }) => {
   return (
     <>
       {cards.length > 0 ? (

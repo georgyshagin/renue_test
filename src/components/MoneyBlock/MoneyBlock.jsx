@@ -7,6 +7,8 @@ import styles from "./styles.module.css";
 export const MoneyBlock = () => {
   const [enteredMoneyValue, setEnteredMoneyValue] = useState(50);
   const [activeMoneyValue, setActiveMoneyValue] = useState(0);
+  const checkTotalBalance = () =>
+    setActiveMoneyValue(+enteredMoneyValue + +activeMoneyValue);
 
   return (
     <div className={styles.root}>
@@ -24,14 +26,7 @@ export const MoneyBlock = () => {
             <option value="1000">1000</option>
           </select>
         </form>
-        <Button
-          onClick={() => {
-            setActiveMoneyValue(enteredMoneyValue);
-            console.log(enteredMoneyValue);
-          }}
-        >
-          Внести
-        </Button>
+        <Button onClick={checkTotalBalance}>Внести</Button>
       </BuyBlock>
 
       <BuyBlock title={`Ваш баланс: ${activeMoneyValue}`}></BuyBlock>
