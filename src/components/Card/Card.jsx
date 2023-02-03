@@ -8,7 +8,7 @@ export const Card = ({ card }) => {
     <div className={styles.root}>
       <img
         className={styles.img}
-        src={"../../data/products/" + card.img}
+        src={"../../renue_test/build/data/products/" + card.img}
         alt={card.name}
       />
       <h2 className={styles.title}>{card.name}</h2>
